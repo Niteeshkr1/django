@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pathology Test Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pathology Test Data</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Test Name</th>
+            <th>Category</th>
+            <th>Parameter</th>
+            <th>Expected Result</th>
+            <th>Result Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Replace this sample data with your actual Django model data -->
+        <tr>
+            <td>Sample Test</td>
+            <td>Sample Category</td>
+            <td>Sample Parameter</td>
+            <td>Sample Expected Result</td>
+            <td>Sample Result Unit</td>
+        </tr>
+        <!-- Iterate through your Django model data to populate the table -->
+        <!-- Example Django template code: -->
+        {% for test_master in test_masters %} 
+        <tr>
+            <td>{{ test_master.test.test_name }}</td>
+            <td>{{ test_master.test.category.category }}</td>
+            <td>{{ test_master.parameter }}</td>
+            <td>{{ test_master.expected_result }}</td>
+            <td>{{ test_master.result_unit }}</td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+</table>
+
+</body>
+</html>
+
+
+
